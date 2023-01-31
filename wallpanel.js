@@ -359,6 +359,7 @@ function setToolbarHidden(hidden) {
 		.querySelector("app-toolbar");
 
 		let appView = document.querySelector('#view');
+		console.log(appView);
 		
 		if (hidden) {
 			appToolbar.style.setProperty("display", "none");			
