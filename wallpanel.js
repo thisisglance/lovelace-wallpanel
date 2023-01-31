@@ -358,7 +358,7 @@ function setToolbarHidden(hidden) {
 		.querySelector("hui-root").shadowRoot
 		.querySelector("app-toolbar");
 
-		let appView = document.getElementById('view');
+		let appView = elHaMain.shadowRoot.getElementById('view');
 		console.log(appView);
 
 		if (hidden) {
