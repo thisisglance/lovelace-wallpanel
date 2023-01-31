@@ -357,11 +357,16 @@ function setToolbarHidden(hidden) {
 		.querySelector("ha-panel-lovelace").shadowRoot
 		.querySelector("hui-root").shadowRoot
 		.querySelector("app-toolbar");
+
+		let appView = document.querySelector('#view');
+		
 		if (hidden) {
-			appToolbar.style.setProperty("display", "none");
+			appToolbar.style.setProperty("display", "none");			
+			appView.style.setProperty("min-height", "100vh");
 		}
 		else {
 			appToolbar.style.removeProperty("display");
+			appView.style.setProperty("min-height", "calc(100vh - var(--header-height) - env(safe-area-inset-top) - env(safe-area-inset-bottom))");
 		}
 		window.dispatchEvent(new Event('resize'));
 	}
