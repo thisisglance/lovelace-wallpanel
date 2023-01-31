@@ -358,9 +358,9 @@ function setToolbarHidden(hidden) {
 		.querySelector("hui-root").shadowRoot
 		.querySelector("app-toolbar");
 
-		let appView = document.querySelector('#view');
+		let appView = document.getElementById('view');
 		console.log(appView);
-		
+
 		if (hidden) {
 			appToolbar.style.setProperty("display", "none");			
 			appView.style.setProperty("min-height", "100vh");
